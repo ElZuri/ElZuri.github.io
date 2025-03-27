@@ -1,0 +1,111 @@
+/* Estilos Base */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Header Animado */
+.header {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  color: white;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  transition: transform 0.3s;
+}
+
+.header:hover {
+  transform: translateY(-5px);
+}
+
+.contacto p {
+  margin: 0.5rem;
+  opacity: 0.9;
+}
+
+/* Secciones Interactivas */
+.seccion {
+  background: white;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.animacion-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Skills con Efecto Hover */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.skill-categoria {
+  background: #fff;
+  padding: 1rem;
+  border-left: 4px solid #3498db;
+  transition: all 0.3s;
+}
+
+.skill-categoria:hover {
+  transform: translateX(10px);
+  background: #f8f9fa;
+}
+
+.skill-titulo {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+/* Efectos de Texto */
+h2 {
+  color: #3498db;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .header {
+    padding: 1rem;
+  }
+
+  .skills {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animaciones */
+@keyframes entrada {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.seccion {
+  animation: entrada 0.6s ease-out;
+}
